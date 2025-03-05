@@ -1,0 +1,587 @@
+/* -------------------- CSS BY Mark Carlton -------------------------------------- */
+
+/* -------------------- IMPORTED FONTS -------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap');
+/*-------------------- CSS RESET --------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* -------------------- ROOT VARIABLES --------------------------------------- */
+:root{
+    --dark: #0D0D0D;
+    --white: #F2F2F2;
+    --white-clear: rgba(242, 242, 242, .75);
+    --cyan: #7ABFBF;
+    --light: rgba(122, 191, 191, .5);
+    --orange: #EB5428;
+}
+
+/* -------------------- Global Styles --------------------------------------- */
+html{
+    min-width: 468px;
+    background-color: var(--light);
+}
+
+body{
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    background-color: var(--white);
+}
+
+nav{
+    position: absolute;
+    top: 0;
+    background-color: white;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0px 6px 10px -10px;
+}
+
+#home{
+    background-color: var(--orange);
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#home a svg{
+    width: 100%;
+    height: 100%;
+    transform: scale(80%);
+}
+
+#menu{
+    display: flex;
+    justify-content: space-around;
+    height: 85px;
+}
+
+#hamburger ul{
+    display: none;
+}
+
+header{
+    margin-top: 80px;
+    padding-top: 100px;
+}
+
+#hamburger{
+    margin: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#hamburger a{
+    margin-top: 10px;
+    text-decoration: none;
+    font-family: "Bebas Neue";
+    font-size: 20px;
+    color: var(--dark);
+}
+
+#hamburger a svg{
+    margin-top: 2px;
+    margin-bottom: 0px;
+    transform: scale(108%);
+    padding-bottom: 4px;
+}
+
+#hamburger a p{
+    margin-left: 2px;
+}
+
+#sign-in{
+    margin: auto;
+}
+
+#sign-in a svg{
+    margin-top: 5px;
+    margin-bottom: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#sign-in a{
+    margin-top: 0;
+    text-decoration: none;
+    font-family: "Bebas Neue";
+    font-size: 20px;
+    color: var(--dark);
+}
+
+#sign-in a p{
+    margin-right: 5px;
+}
+
+#search{
+    position: absolute;
+    top: 120px;
+    border: 2px solid var(--orange);
+    background-color: var(--orange);
+    left: 20%;
+    right: 20%;
+    max-width: 350px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#search svg{
+    margin: auto;
+}
+
+#search input[type=text]{
+    padding: 5px 0px 0px 5px;
+    width: 80%;
+    border: none;
+}
+
+h1{
+    font-family: "Bebas Neue";
+    font-size: 40px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    color: var(--dark);
+}
+
+.links ul{
+    display: flex;
+    justify-content: space-around;
+    margin: 5px 10px;
+    text-align: center;
+}
+
+.links ul li a{
+    text-decoration: none;
+}
+
+.links ul li a p{
+    font-family: "bebas neue";
+    text-decoration: none;
+    color: var(--orange);
+    font-size: 20px;
+}
+
+#street-tacos div img{
+    max-width: 100%;
+}
+
+#street-tacos > div > p{
+    margin: 10px;
+    font-family: "montserrat";
+    font-size: 16px;
+    color: var(--dark);
+    line-height: 1.25em;
+}
+
+h2{
+    font-family: "bebas neue";
+    font-size: 30px;
+    text-align: center;
+    margin: 15px;
+    color: var(--dark);
+}
+
+#details li{
+    font-family: "montserrat";
+    margin: 10px;
+    color: var(--dark);
+}
+
+#details li b{
+    font-weight: 700;
+    color: var(--dark);
+}
+
+#ingredients ul{
+    list-style-type: square;
+    margin: 10px 30px;
+    line-height: 30px;
+    font-family: "montserrat";
+    color: var(--dark);
+}
+
+#directions ol{
+    font-family: "montserrat";
+    color: var(--dark);
+    line-height: 25px;
+}
+
+#directions ol li{
+    margin: 10px 10px 0 0;
+}
+
+#sides{
+    background-color: var(--cyan);
+    padding: 5px 10px 10px 10px;
+}
+
+#sides h3{
+    font-family: "bebas neue";
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+#sides img{
+    width: 100px;
+    height: 100px;
+    background-color: #0D0D0D;
+}
+
+.nested-grid{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.nested-grid > div{
+    margin: 0 10px auto 20px;
+}
+
+.nested-grid p{
+    font-family: "montserrat";
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.nested-grid b{
+    font-weight: 700;
+}
+
+.nested-grid:last-child{
+    margin-bottom: 0;
+}
+
+#socials ul{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 40px 20px 10px 20px;
+}
+
+#socials ul li{
+    text-align: center;
+    font-family: "bebas neue";
+    
+}
+
+#socials ul li a{
+    text-decoration: none;
+    color: var(--orange);
+    font-size: 20px;
+}
+
+#copyright img{
+    width: 45%;
+    height: auto;
+    order: -1;
+    margin: 20px auto;
+}
+
+#copyright{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: "bebas neue";
+    font-size: 20px;
+}
+
+/* -------------------- Media Query Medium --------------------------------------- */
+@media screen and (min-width: 768px){
+    body{
+        width: 80%;
+        max-width: 1000px;
+        margin: auto;
+        background-color: var(--white);
+    }
+
+    nav{
+        max-width: 1000px;
+        box-shadow: none;
+    }
+    
+    #home{
+        background-color: var(--orange);
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        left: 0;
+    }
+    
+    #home a svg{
+        width: 100%;
+        height: 100%;
+        transform: scale(70%);
+    }
+    
+    #menu{
+        height: 80px;
+    }
+
+    #sign-in{
+        margin-right: 15px;
+    }
+
+    #hamburger{
+        width: 0;
+    }
+
+    #hamburger > a{
+        display: none;
+    }
+
+    #search{
+        top: 17px;
+        right: 40px;
+    }
+    
+    #hamburger ul{
+        position: absolute;
+        background-color: #ffffff;
+        top: 80px;
+        display: flex;
+        justify-content: space-between;
+        left: 0;
+        right: 0;
+        padding: 10px;
+        box-shadow: 0px 6px 10px -10px;
+    }
+
+    #hamburger ul li a{
+        display: flex;
+        flex-direction: column;
+        color: var(--orange);
+    }
+
+    #hamburger ul li{
+        width: auto;
+        text-align: center;
+    }
+
+    #hamburger ul li a img{
+        width: 70px;
+        order: -1;
+    }
+
+    header{
+        margin-top: 120px;
+        padding-top: 100px;
+    }
+    
+    header h1{
+        text-align: left;
+        margin-left: 20px;
+    }
+
+    .links ul{
+        background-color: var(--white-clear);
+        position: absolute;
+        display: flex;
+        justify-content: space-around;
+        margin: 0 10% 0 10%;
+        padding-top: 10px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        width: 80%;
+        max-width: 1000px;
+        padding-bottom: 10px;
+    }
+
+    #details{
+        text-align: center;
+    }
+
+    #details b{
+        margin-right: 15px;
+    }
+
+    #ingredients{
+        float: left;
+    }
+
+    #sides{
+        clear: both;
+    }
+
+    .sides-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #copyright{
+        order: -1;
+    }
+}
+
+/* -------------------- Media Query Large --------------------------------------- */
+@media screen and (min-width: 1200px){
+    body{
+        width: 80%;
+        max-width: 1200px;
+        margin: auto;
+        background-color: var(--white);
+    }
+
+    nav{
+        max-width: 1200px;
+        box-shadow: none;
+        height: 120px;
+    }
+
+    #search{
+        top: 160px;
+        left: 0;
+        right: 0;
+    }
+
+    #hamburger ul{
+        width: 60%;
+        box-shadow: none;
+        top: 0;
+        margin: auto;
+    }
+
+    header h1{
+        text-align: center;
+    }
+
+    #home{
+        height: 120px;
+        width: auto;
+    }
+
+    #home svg{
+        transform: scale(10%);
+    }
+
+    #street-tacos{
+        display: grid;
+        grid-template-columns: auto 1fr 1fr;
+    }
+
+    .links ul{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        margin: 0;
+        position: relative;
+    }
+
+    .links ul li{
+        margin: 5px auto;
+        transform: scale(80%);
+    }
+
+    .links{
+        border: 2px var(--orange) solid;
+    }
+
+    #sign-in{
+        height: 70px;
+        width: auto;
+        text-align: center;
+        margin-right: 30px;
+    }
+
+    #street-tacos img{
+        width: 100%;
+        height: 100%;
+    }
+
+    #details{
+        background-color: var(--dark);
+        text-align: center;
+        padding-top: 5px;
+    }
+
+    #details h2{
+        color: var(--cyan);
+    }
+
+    #details ul{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #details li{
+        color: var(--cyan);
+        display: flex;
+        flex-direction: column;
+    }
+
+    #details li b{
+        color: var(--cyan);
+    }
+
+    #sides img {
+        width: 200px;
+        height: auto;
+        margin: auto auto 10px auto;
+    }
+
+    .sides-grid{
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+
+    .nested-grid{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        gap: 10px;
+    }
+
+}
